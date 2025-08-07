@@ -5,20 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Santería Yemayá - Landing Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
- <link rel="stylesheet" href="/estilos/estilos.css">
+  <link rel="stylesheet" href="/estilos/estilos.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Tipografía mística y seria -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1 class="mb-8 text-4xl sm:text-5xl text-center">Santería Yemayá</h1>
-  <div class="main-container" role="main">
-    <section class="image-section" aria-label="Ilustración representando a Yemayá, reina del mar">
-      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/666cb647-f280-4879-8bf3-4026379aee22.png" 
-           alt="Ilustración digital de Yemayá, con vestido azul y adornos marinos, rodeada de olas y elementos marinos en tonos azules" 
-           onerror="this.style.display='none';" />
-    </section>
-    <section class="info-section" aria-label="Información de productos y servicios de Santería Yemayá">
-      <div class="products" aria-labelledby="products-title" tabindex="0">
+  <!-- INICIO ORDENADO Y MÍSTICO -->
+  <header class="w-full flex flex-col items-center justify-center py-10 bg-gradient-to-b from-[#0a2239] via-[#1c3a5e] to-transparent shadow-lg border-b-2 border-cyan-900/30">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-10 w-full max-w-5xl">
+      <!-- Imagen principal -->
+      <div class="flex-1 flex flex-col items-center">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/666cb647-f280-4879-8bf3-4026379aee22.png" 
+             alt="Ilustración digital de Yemayá, con vestido azul y adornos marinos, rodeada de olas y elementos marinos en tonos azules" 
+             class="rounded-xl shadow-2xl border-4 border-cyan-200/30 max-w-xs md:max-w-sm"
+             onerror="this.style.display='none';" />
+      </div>
+      <!-- Información principal -->
+      <div class="flex-1 flex flex-col items-center text-center gap-3">
+        <span class="text-cyan-200 text-lg tracking-widest font-semibold" style="font-family:'Cinzel',serif;letter-spacing:0.2em;">
+          Santuario de Luz y Mar
+        </span>
+        <h1 class="text-5xl md:text-6xl text-cyan-100 drop-shadow-lg font-extrabold mb-2" style="font-family:'UnifrakturCook','Cinzel',serif;">
+          Santería Yemayá
+        </h1>
+        <span class="block text-cyan-300 text-base italic tracking-wide" style="font-family:'Cinzel',serif;">
+          Magia, protección y sabiduría ancestral
+        </span>
+        <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-700 to-cyan-800 rounded-full my-2"></div>
+        <div class="flex items-center gap-2 justify-center mt-2">
+          <i class="bi bi-water text-cyan-300 text-2xl"></i>
+          <span class="text-cyan-200 font-medium" style="font-family:'Cinzel',serif;">Reina del Mar</span>
+          <i class="bi bi-moon-stars text-cyan-300 text-2xl"></i>
+        </div>
+        <!-- Apartado de redes sociales -->
+        <div class="flex gap-4 mt-6 justify-center">
+          <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" class="text-cyan-200 hover:text-cyan-400 text-2xl transition">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" class="text-cyan-200 hover:text-cyan-400 text-2xl transition">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://wa.me/56950078868" target="_blank" aria-label="WhatsApp" class="text-cyan-200 hover:text-cyan-400 text-2xl transition">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-container flex flex-col md:flex-row gap-8 items-center justify-center mt-8" role="main">
+    <section class="info-section flex-1" aria-label="Información de productos y servicios de Santería Yemayá">
+      <div class="products mb-4" aria-labelledby="products-title" tabindex="0">
         <h2 id="products-title" class="text-2xl font-semibold mb-3 text-cyan-100">Productos que ofrecemos</h2>
-        <ul class="list-disc list-inside max-h-72 overflow-y-auto" aria-describedby="scroll-instructions">
+        <ul class="list-disc list-inside max-h-72 overflow-y-auto pl-4" aria-describedby="scroll-instructions">
           <p id="scroll-instructions" class="sr-only">Lista de productos; utilice scroll si es necesario</p>
           <li>Cascarilla</li>
           <li>Manteca de coco</li>
@@ -48,11 +90,165 @@
       <div class="highlight-box" role="region" aria-live="polite" aria-label="Servicios destacados">
         Lectura de tarot, limpiezas espirituales, sahumerios
       </div>
-      <button class="phone" aria-label="Contacto por teléfono: +569 5007 8868" onclick="window.location.href='tel:+56950078868'">
-        +56 9 5007 8868
+      <button class="phone mt-4" aria-label="Contacto por teléfono: +569 5007 8868" onclick="window.location.href='tel:+56950078868'">
+        <i class="bi bi-telephone-fill me-2"></i>+56 9 5007 8868
       </button>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.558965554649!2d-70.7270345848127!3d-32.74976338105067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967b3a09a66d4c51%3A0x84e2547b877ae57b!2sCalle%20Salinas%2C%20San%20Felipe%2C%20Valpara%C3%ADso%2C%20Chile!5e0!3m2!1ses!2sus!4v1691325000000!5m2!1ses!2sus"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </section>
   </div>
+
+  <section id="productos" class="w-full max-w-6xl mx-auto mt-12 px-4">
+    <h2 class="text-3xl font-bold mb-6 text-center text-cyan-100 drop-shadow-lg">Todos los productos por categoría</h2>
+    <div class="space-y-6">
+
+      <!-- Mantecas y productos básicos -->
+      <div class="bg-white/10 rounded-lg p-4 shadow-lg">
+        <button onclick="toggleCategory('mantecas')" class="w-full flex items-center justify-between text-left font-bold text-lg text-white py-2 px-3 rounded-lg bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 hover:from-cyan-700 hover:to-blue-900 transition-all duration-300 shadow-md">
+          <span>🧴 Mantecas y productos básicos</span>
+          <i class="bi bi-chevron-down transition-transform" id="arrow-mantecas"></i>
+        </button>
+        <div id="mantecas" class="hidden mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://el-sembrador.com.ar/wp-content/uploads/2024/12/CASCARILLA-CACAO.png" alt="Cascarilla" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Cascarilla</p>
+          </div>
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Manteca de coco" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Manteca de coco</p>
+          </div>
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/868/868170.png" alt="Manteca carajo" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Manteca carajo</p>
+          </div>
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/3774/3774576.png" alt="Palo santo" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Palo santo</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hierbas y Naturaleza -->
+      <div class="bg-white/10 rounded-lg p-4 shadow-lg">
+        <button onclick="toggleCategory('hierbas')" class="w-full flex items-center justify-between text-left font-bold text-lg text-white py-2 px-3 rounded-lg bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 hover:from-cyan-700 hover:to-blue-900 transition-all duration-300 shadow-md">
+          <span>🍀 Hierbas y Naturaleza</span>
+          <i class="bi bi-chevron-down transition-transform" id="arrow-hierbas"></i>
+        </button>
+        <div id="hierbas" class="hidden mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/3205/3205091.png" alt="Hierbas" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Hierbas</p>
+          </div>
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/6826/6826053.png" alt="Hierbas y duendes" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Hierbas y duendes</p>
+          </div>
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/4147/4147014.png" alt="Brujas y haditas" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Brujas y haditas</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Velas y Cirios -->
+      <div class="bg-white/10 rounded-lg p-4 shadow-lg">
+        <button onclick="toggleCategory('velas')" class="w-full flex items-center justify-between text-left font-bold text-lg text-white py-2 px-3 rounded-lg bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 hover:from-cyan-700 hover:to-blue-900 transition-all duration-300 shadow-md">
+          <span>🕯️ Velas y Cirios</span>
+          <i class="bi bi-chevron-down transition-transform" id="arrow-velas"></i>
+        </button>
+        <div id="velas" class="hidden mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/4147/4147035.png" alt="Velas y productos" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Velas y productos</p>
+          </div>
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/4193/4193257.png" alt="Velas y cirios" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Velas y cirios</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inciensos y Sahumerios -->
+      <div class="bg-white/10 rounded-lg p-4 shadow-lg">
+        <button onclick="toggleCategory('inciensos')" class="w-full flex items-center justify-between text-left font-bold text-lg text-white py-2 px-3 rounded-lg bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 hover:from-cyan-700 hover:to-blue-900 transition-all duration-300 shadow-md">
+          <span>💨 Inciensos y Sahumerios</span>
+          <i class="bi bi-chevron-down transition-transform" id="arrow-inciensos"></i>
+        </button>
+        <div id="inciensos" class="hidden mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/9100/9100454.png" alt="Inciensos y varitas" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Inciensos y varitas</p>
+          </div>
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" alt="Sahumerios & Sahumadores" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Sahumerios & Sahumadores</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Baños y Sales -->
+      <div class="bg-white/10 rounded-lg p-4 shadow-lg">
+        <button onclick="toggleCategory('banos')" class="w-full flex items-center justify-between text-left font-bold text-lg text-white py-2 px-3 rounded-lg bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 hover:from-cyan-700 hover:to-blue-900 transition-all duration-300 shadow-md">
+          <span>🧼 Baños y Sales</span>
+          <i class="bi bi-chevron-down transition-transform" id="arrow-banos"></i>
+        </button>
+        <div id="banos" class="hidden mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/9433/9433603.png" alt="Baños descargas" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Baños descargas</p>
+          </div>
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/1006/1006524.png" alt="Jabones naturales" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Jabones naturales</p>
+          </div>
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/7097/7097573.png" alt="Sales de baño" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Sales de baño</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Perfumes y Aceites -->
+      <div class="bg-white/10 rounded-lg p-4 shadow-lg">
+        <button onclick="toggleCategory('perfumes')" class="w-full flex items-center justify-between text-left font-bold text-lg text-white py-2 px-3 rounded-lg bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 hover:from-cyan-700 hover:to-blue-900 transition-all duration-300 shadow-md">
+          <span>🌸 Perfumes y Aceites</span>
+          <i class="bi bi-chevron-down transition-transform" id="arrow-perfumes"></i>
+        </button>
+        <div id="perfumes" class="hidden mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/4821/4821214.png" alt="Perfumes con feromonas" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Perfumes con feromonas</p>
+          </div>
+          <div class="product-card p-3 flex flex-col items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/928/928489.png" alt="Aceites con feromonas" class="w-20 h-20 mx-auto mb-2 drop-shadow-lg">
+            <p class="text-white font-medium">Aceites con feromonas</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Script para controlar los toggles -->
+  <script>
+    function toggleCategory(id) {
+      const section = document.getElementById(id);
+      const icon = document.getElementById('arrow-' + id);
+
+      section.classList.toggle('hidden');
+      section.classList.toggle('grid');
+
+      if (icon) {
+        icon.classList.toggle('rotate-180');
+      }
+    }
+  </script>
 </body>
 </html>
-
